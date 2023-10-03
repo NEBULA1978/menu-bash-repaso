@@ -1,0 +1,6 @@
+Establecer caracter y conversión de ficheros
+
+    dos2unix filedos.txt fileunix.txt: convertir un formato de fichero texto desde MSDOS a UNIX.
+    unix2dos fileunix.txt filedos.txt: convertir un formato de fichero de texto desde UNIX a MSDOS.
+    recode ..HTML < page.txt > page.html: convertir un fichero de texto en html.
+    recode -l | more: mostrar todas las conversiones de formato disponibles.
