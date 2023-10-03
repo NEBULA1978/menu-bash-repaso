@@ -1,15 +1,18 @@
 #!/bin/bash
 
-
 # Definimos un array con las opciones del menú. Cada opción es una cadena con dos partes separadas por el carácter '|': el nombre de la opción y el comando correspondiente.
 opciones=(
     "Mostrar archivos del directorio actual:|ls"
     "Mostrar calendario:|cal"
-    "Mostrar dia de hoy:|date"
-    "Ver wifi conectado en linux mint | nmcli device wifi list"
-    
+    "Mostrar día de hoy:|date"
+    "Ver wifi conectado en Linux Mint:|nmcli device wifi list"
     "Salir:|exit 0"
 )
+
+# Agrega las opciones desde texto1.txt
+while IFS= read -r linea; do
+    opciones+=("$linea")
+done < texto1.txt
 
 while true; do
     clear
