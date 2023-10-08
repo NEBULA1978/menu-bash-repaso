@@ -9,10 +9,13 @@ crear-menu-bash/menu1-importar-opciones2.sh
 Entiendo que deseas que la línea "convertir un formato de fichero texto desde MSDOS a UNIX: | dos2unix filedos.txt fileunix.txt" sea reemplazada en la línea 9 del archivo menu1-importar-opciones2.sh utilizando el comando sed. Para hacerlo, puedes usar el siguiente comando sed:
 
 Añadir la linea 9 de menu1-importar-opciones2 desde archivo de texto1.txt linea 3:
+
  sed -i '9s/.*/"convertir un formato de fichero texto desde MSDOS a UNIX: | dos2unix filedos.txt fileunix.txt"/' menu1-importar-opciones2.sh
 
 Añadir la linea 10 de menu1-importar-opciones2 desde archivo de texto1.txt linea 5:
+
 sed -i '10s/.*/"convertir un fichero de texto en html: | recode ..HTML < page.txt > page.html"/' menu1-importar-opciones2.sh
 
 Añadir la linea 11 de menu1-importar-opciones2 desde archivo de texto1.txt linea 6:
+
 sed -i '11s/.*/"mostrar todas las conversiones de formato disponibles: | recode -l | more"/' menu1-importar-opciones2.sh

@@ -1,0 +1,27 @@
+carpeta 1:
+# Agrega la línea "unix2dos fileunix.txt filedos.txt: convertir un formato de fichero de texto desde UNIX a MSDOS."
+sed -i '9a "unix2dos fileunix.txt filedos.txt: convertir un formato de fichero de texto desde UNIX a MSDOS."' menu1-importar-opciones2.sh
+
+# Agrega la línea "recode ..HTML < page.txt > page.html: convertir un fichero de texto en html."
+sed -i '10a "recode ..HTML < page.txt > page.html: convertir un fichero de texto en html."' menu1-importar-opciones2.sh
+
+# Agrega la línea "recode -l | more: mostrar todas las conversiones de formato disponibles."
+sed -i '11a "recode -l | more: mostrar todas las conversiones de formato disponibles."' menu1-importar-opciones2.sh
+
+Carpeta 2:
+crear-menu-bash/menu1-importar-opciones2.sh
+
+Añado primera linea archivo texto1.txt:
+ sed -i '10i "Análisis del sistema de ficheros"' menu.sh
+
+# Obtenemos la línea 3 del archivo texto1.txt
+linea_texto=$(sed -n '3p' texto1.txt)
+
+# Extraemos el título de la línea
+titulo=$(echo "$linea_texto" | cut -d' ' -f1)
+
+# Insertamos la línea en el archivo menu.sh
+sed -i '11i "Analizar el sistema de ficheros: $titulo"' menu.sh
+
+Este código primero obtiene la línea 3 del archivo texto1.txt y la almacena en la variable linea_texto. A continuación, utiliza la función cut para extraer el primer campo de la línea, que es el título. Finalmente, utiliza el comando sed para insertar la siguiente línea en la línea 11 del archivo menu.sh:
+
